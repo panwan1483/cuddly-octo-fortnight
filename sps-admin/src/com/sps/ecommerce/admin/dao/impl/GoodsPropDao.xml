@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.GoodsPropDao">
+	<resultMap type="GoodsProp" id="goodsPropMap">
+		<result property="id" column="id"></result>
+		<result property="name" column="name"></result>
+		<result property="sequence" column="sequence"></result>
+		<result property="type" column="type"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="selectGoodsPropByPage" resultMap="goodsPropMap">
+		select *
+		from sps_goods_prop 
+	  	ORDER BY create_time DESC LIMIT #{pageNum},#{pageSize}
+	</select>
+	
+	<select id="selectPageCount" resultType="int">
+		select count(*) from sps_goods_prop 
+	</select>
+	
+	<select id="getPropIdByName" parameterType="String">
+		select id from sps_goods_prop where name=#{name}
+	</select>
+	
+	<select id="getPropById" parameterType="long" resultMap="goodsPropMap">
+		select * from sps_goods_prop where id=#{propId}
+	</select>
+	
+	<insert id="insertGoodsProp" parameterType="GoodsProp">
+		insert into sps_goods_prop(name,sequence,type,create_time) values(#{name},#{sequence},#{type},#{createTime})
+	</insert>
+	
+	<update id="updateGoodsProp" parameterType="GoodsProp">
+		update sps_goods_prop set name=#{name},sequence=#{sequence},type=#{type} where id=#{id}
+	</update>
+</mapper>

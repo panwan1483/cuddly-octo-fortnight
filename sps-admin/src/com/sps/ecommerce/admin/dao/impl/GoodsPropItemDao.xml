@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.GoodsPropItemDao">
+	<resultMap type="GoodsPropItem" id="goodsPropItemMap">
+		<result property="id" column="id"></result>
+		<result property="propId" column="prop_id"></result>
+		<result property="sequence" column="sequence"></result>
+		<result property="value" column="value"></result>
+		<result property="img" column="img"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="getGoodsPropItemById" resultMap="goodsPropItemMap">
+		select * from sps_goods_prop_item where id=#{id}
+	</select>
+	
+	<select id="getPropItemById" resultMap="goodsPropItemMap">
+		select * from sps_goods_prop_item where prop_id=#{propId} ORDER BY create_time DESC
+	</select>
+	
+	<insert id="addGoodsPropItem" parameterType="GoodsPropItem">
+		insert into sps_goods_prop_item(prop_id,sequence,value,create_time,img) values(#{propId},#{sequence},#{value},#{createTime},img)
+	</insert>
+	
+	<delete id="deleteGoodsPropItem">
+		delete from sps_goods_prop_item where prop_id=#{propId} 
+	</delete>
+
+	<update id="updateGoodsPropItem" parameterType="GoodsPropItem">
+		update sps_goods_prop_item set name=#{name},sequence=#{sequence},type=#{type},create_time=#{createTime} where id=#{id}
+	</update>
+</mapper>

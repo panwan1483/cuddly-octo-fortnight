@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.SysUsersDao">
+
+	 <resultMap type="Sysusers" id="sysUsersMap">
+		<result property="id" column="id"></result>
+		<result property="username" column="username"></result>
+		<result property="password" column="password"></result>
+		<result property="cnname" column="cnname"></result>
+		<result property="phone" column="phone"></result>
+		<result property="gender" column="gender"></result>
+		<result property="status" column="status"></result>
+		<result property="createTime" column="create_time"></result>
+	 </resultMap>
+	 
+	 <sql id="query_filter_condition">
+	   <if test="cnname !=null and cnname !=''">
+	 		and cnname like CONCAT('%',#{cnname},'%') 
+	 	</if>
+	 	<if test="status !=1">
+	 		and status=#{status}
+	 	</if>
+	 </sql>
+
+	<select id="getSysUsersById" resultMap="sysUsersMap">
+		select * from sys_users where id=#{id}
+	</select>
+	
+	<select id="getSysUsersByUsername" resultMap="sysUsersMap">
+		select * from sys_users where username=#{username}
+	</select>
+	
+	<select id="listSysUsers" resultMap="sysUsersMap">
+		select * from sys_users where 1=1
+	    <include refid="query_filter_condition"></include>
+		order by create_time desc limit #{pageNum},#{pageSize}
+	</select>
+	
+	<select id="getPageCount" resultType="Integer">
+		select count(*) from sys_users where 1=1
+	  	<include refid="query_filter_condition"></include>
+	</select>
+	
+	<update id="updateSysUsersPassword">
+		update sys_users set password=#{password} where id=#{sysId}
+	</update>
+	
+	<update id="deleteSysUsers">
+		update sys_users set status=#{status} where id=#{id}
+	</update>
+	
+	<insert id="saveSysUsers" parameterType="SysUsers">
+		insert into sys_users(username,password,cnname,phone,gender,status,create_time) 
+		values(#{username},#{password},#{cnname},#{phone},#{gender},#{status},#{createTime})
+	</insert>
+	
+</mapper>

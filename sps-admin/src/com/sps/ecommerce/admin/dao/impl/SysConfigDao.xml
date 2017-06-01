@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.SysConfigDao">
+
+	 <resultMap type="Systemconfig" id="systemConfigMap">
+		<result property="id" column="id"></result>
+		<result property="paramCode" column="param_code"></result>
+		<result property="paramName" column="param_name"></result>
+		<result property="paramValue" column="param_value"></result>
+		<result property="paramDesc" column="param_desc"></result>
+		<result property="createTime" column="create_time"></result>
+	 </resultMap>
+	 
+	<sql id="filter">
+	 	<if test="name!=''and name!=null">
+	    	and param_name like concat('%',#{name},'%') 
+	    </if>
+	</sql>
+	
+	<sql id="coder">
+	 	<if test="code!=''and code!=null">
+	    	and param_code like concat('%',#{code},'%') 
+	    </if>
+	</sql>
+	 
+	<select id="getAllSystemConfig" resultMap="systemConfigMap">
+	    select * from sys_system_config where 1=1
+	    <include refid="filter"></include>
+	    <include refid="coder"></include>
+	    order by create_time desc limit #{pageNum},#{pageSize}
+	</select>
+	
+	<select id="getPageCount" resultType="Integer" parameterType="String">
+	    select count(*) from sys_system_config where 1=1 
+	    <include refid="filter"></include>
+	    <include refid="coder"></include>
+	</select>
+	
+	<select id="getSystemConfigById" resultMap="systemConfigMap">
+	      select * from sys_system_config where id=#{id}
+	</select>
+	
+	<select id="getSystemConfigByParamCode" resultMap="systemConfigMap">
+	      select * from sys_system_config where param_code=#{paramCode}
+	</select>
+	
+	<select id="listSystemConfig" resultMap="systemConfigMap">
+	    select * from sys_system_config order by create_time desc
+	</select>
+	
+	<insert id="saveSystemConfig" parameterType="SystemConfig">
+	    insert  into sys_system_config(param_code,param_name,param_value,param_desc,create_time) values
+	    (#{paramCode},#{paramName},#{paramValue},#{paramDesc},#{createTime})
+	</insert>
+	
+	<update id="modifySystemConfig" parameterType="SystemConfig">
+	     update sys_system_config set param_name=#{paramName},param_value=#{paramValue},param_desc=#{paramDesc} where id=#{id}
+	</update>
+	
+	<delete id="deleteSystemConfig">
+	    delete from sys_system_config where id=#{id}
+	</delete>
+	
+</mapper>

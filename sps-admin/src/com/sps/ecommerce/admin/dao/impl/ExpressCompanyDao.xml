@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.ExpressCompanyDao">
+	<resultMap type="ExpressCompany" id="expressCompanyMap">
+		<result property="id" column="id"></result>
+		<result property="companyCode" column="company_code"></result>
+		<result property="companyName" column="company_name"></result>
+		<result property="companySequence" column="company_sequence"></result>
+		<result property="companyType" column="company_type"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="getExpressCompanyById" resultMap="expressCompanyMap">
+		select * from sps_express_company where id=#{id}
+	</select>
+	
+	<select id="listExpressCompany" resultMap="expressCompanyMap">
+		select * from sps_express_company order by create_time desc
+	</select>
+	
+	<insert id="saveExpressCompany" parameterType="ExpressCompany">
+		insert into sps_express_company(company_code,company_name,company_sequence,company_type,create_time) 
+		values(#{companyCode},#{companyName},#{companySequence},#{companyType},#{createTime})
+	</insert>
+	
+	<delete id="deleteExpressCompany">
+		delete from sps_express_company where id=#{id}
+	</delete>
+	
+	<update id="updateExpressCompany" parameterType="ExpressCompany">
+		update sps_express_company set company_code=#{companyCode},company_name=#{companyName},
+		company_sequence=#{companySequence},company_type=#{companyType},create_time=#{createTime}
+		where id=#{id}
+	</update>
+</mapper>

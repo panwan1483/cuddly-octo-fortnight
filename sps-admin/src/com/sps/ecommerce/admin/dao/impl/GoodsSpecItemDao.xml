@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.GoodsSpecItemDao">
+
+	<resultMap type="GoodsSpecItem" id="goodsSpecItemMap">
+		<result property="id" column="id"></result>
+		<result property="specId" column="spec_id"></result>
+		<result property="sequence" column="sequence"></result>
+		<result property="value" column="value"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="getGoodsSpecItemById" resultMap="goodsSpecItemMap">
+		select * from sps_goods_spec_item where id=#{id}
+	</select>
+	
+	<select id="listGoodsSpecItem" resultMap="goodsSpecItemMap">
+		select * 
+		from sps_goods_spec_item 
+		ORDER BY create_time DESC LIMIT #{pageNum},#{pageSize}
+	</select>
+	
+	<insert id="addGoodsSpecItem" parameterType="GoodsSpecItem">
+		insert into sps_goods_spec_item(spec_id,sequence,value,create_time) 
+		values(#{specId},#{sequence},#{value},#{createTime})
+	</insert>
+	
+	<update id="updateGoodsSpecItem" parameterType="GoodsSpecItem">
+		update sps_goods_spec_item set spec_id=#{specId},sequence=#{sequence},value=#{value},
+		create_time=#{createTime} where id=#{id}
+	</update>
+	
+	<delete id="deleteGoodsspecItem">
+		delete from sps_goods_spec_item where spec_id=#{specId}
+	</delete>
+	
+</mapper>

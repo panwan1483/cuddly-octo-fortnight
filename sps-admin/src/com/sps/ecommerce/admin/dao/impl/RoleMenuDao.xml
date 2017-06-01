@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.RoleMenuDao">
+	<resultMap type="RoleMenu" id="roleMenuMap">
+		<result property="id" column="id"></result>
+		<result property="roleId" column="role_id"></result>
+		<result property="menuId" column="menu_id"></result>
+	</resultMap>
+	
+	<select id="getRoleMenuById" resultMap="roleMenuMap">
+		select * from sys_role_menu where id=#{id}
+	</select>
+	
+	<select id="listRoleMenu" resultMap="roleMenuMap">
+		select * from sys_role_menu
+	</select>
+	
+	<insert id="saveRoleMenu" parameterType="RoleMenu">
+		insert into sys_role_menu(role_id,menu_id) values(#{roleId},#{menuId})
+	</insert>
+	
+	<delete id="deleteRoleMenu">
+		delete from sys_role_menu where id=#{id}
+	</delete>
+	
+	<update id="updateRoleMenu" parameterType="RoleMenu">
+		update sys_role_menu set role_id=#{roleId},menu_id=#{menuId} where id=#{id}
+	</update>
+</mapper>

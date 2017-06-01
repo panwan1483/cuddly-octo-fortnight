@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.GoodsClassDao">
+	<resultMap type="GoodsClass" id="goodsClassMap">
+		<result property="id" column="id"></result>
+		<result property="className" column="class_name"></result>
+		<result property="display" column="display"></result>
+		<result property="level" column="level"></result>
+		<result property="recommend" column="recommend"></result>
+		<result property="sequence" column="sequence"></result>
+		<result property="clickNumber" column="click_number"></result>
+		<result property="parentId" column="parent_id"></result>
+		<result property="seoDescription" column="seo_description"></result>
+		<result property="seoKeywords" column="seo_keywords"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="getGoodsClassById" resultMap="goodsClassMap">
+		select * from sps_goods_class where id=#{id}
+	</select>
+	
+	<select id="getGoodsClassByName" resultMap="goodsClassMap">
+		select * from sps_goods_class where class_name=#{className}
+	</select>
+	
+	<select id="getGoodsClassBySeq" resultMap="goodsClassMap">
+		select * from sps_goods_class where sequence=#{sequence}
+	</select>
+	
+	<select id="listGoodsClass" resultMap="goodsClassMap">
+		select * from sps_goods_class order by id limit #{pageNum},#{pageSize}
+	</select>
+	
+	<select id="PageCount" resultType="Integer">
+		select count(*) from sps_goods_class
+	</select>
+	
+	<select id="getGoodsClassByLevel" resultMap="goodsClassMap">
+		select * from sps_goods_class where level=#{level}
+	</select>
+	
+	<insert id="saveGoodsClass" parameterType="GoodsClass">
+		insert into sps_goods_class(class_name,display,level,recommend,sequence,click_number,parent_id,seo_description,seo_keywords,create_time) 
+		values(#{className},#{display},#{level},#{recommend},#{sequence},#{clickNumber},#{parentId},#{seoDescription},#{seoKeywords},#{createTime})
+	</insert>
+	
+	<delete id="deleteGoodsClass">
+		delete from sps_goods_class where id=#{id}
+	</delete>
+	
+	<update id="updateGoodsClass" parameterType="GoodsClass">
+		update sps_goods_class set class_name=#{className},display=#{display},level=#{level},recommend=#{recommend},
+		sequence=#{sequence},click_number=#{clickNumber},parent_id=#{parentId},seo_description=#{seoDescription},
+		seo_keywords=#{seoKeywords},create_time=#{createTime} where id=#{id}
+	</update>
+</mapper>

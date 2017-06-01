@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.RoleDao">
+	<resultMap type="Role" id="roleMap">
+		<result property="id" column="id"></result>
+		<result property="roleName" column="role_name"></result>
+		<result property="roleDesc" column="role_desc"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="getRoleById" resultMap="roleMap">
+		select * from sys_role where id=#{id}
+	</select>
+	
+	<select id="listRole" resultMap="roleMap">
+		select * from sys_role order by create_time desc
+	</select>
+	
+	<insert id="saveRole" parameterType="Role">
+		insert into sys_role(role_name,role_desc,create_time) values(roleName,roleDesc,createTime)
+	</insert>
+	
+	<delete id="deleteRole">
+		delete from sys_role where id=#{id}
+	</delete>
+	
+	<update id="updateRole" parameterType="Role">
+		update sys_role set role_name=#{roleName},role_desc=#{roleDesc},create_time=#{createTime} where id=#{id}
+	</update>
+</mapper>

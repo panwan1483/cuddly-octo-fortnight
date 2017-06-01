@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.AccessoryDao">
+
+	<resultMap type="Accessory" id="accessoryMap">
+		<result property="id" column="id"></result>
+		<result property="ext" column="ext"></result>
+		<result property="width" column="width"></result>
+		<result property="height" column="height"></result>
+		<result property="name" column="name"></result>
+		<result property="path" column="path"></result>
+		<result property="remark" column="remark"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="getAccessoryById" resultMap="accessoryMap">
+		select * from sps_accessory where id=#{id}	
+	</select>
+	
+	<select id="listAccessory" resultMap="accessoryMap">
+		select * from sps_accessory order by create_time desc
+	</select>
+	
+	<insert id="saveAccessory" parameterType="Accessory">
+		insert into sps_accessory(ext,width,height,name,path,remark,create_time)
+		values(#{ext},#{width},#{height},#{name},#{path},#{remark},#{createTime})
+	</insert>
+	
+	<delete id="deleteAccessory">
+		delete from sps_accessory where id=#{id}
+	</delete>
+	
+	<update id="updateAccessory" parameterType="Accessory">
+		update sps_accessory set ext=#{ext},width=#{width},height=#{height},name=#{name},path=#{path},
+		remark=#{remark},create_time=#{createTime} where id=#{id}
+	</update>
+	
+</mapper>

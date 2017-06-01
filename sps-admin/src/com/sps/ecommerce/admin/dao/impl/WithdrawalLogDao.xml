@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.WithdrawalLogDao">
+	<resultMap type="WithdrawalLog" id="withdrawalLogMap">
+		<result property="id" column="id"></result>
+		<result property="uid" column="uid"></result>
+		<result property="applyOrder" column="apply_order"></result>
+		<result property="status" column="status"></result>
+		<result property="createTime" column="create_time"></result>
+		<result property="approver" column="approver"></result>
+		<result property="approverTime" column="approver_time"></result>
+	</resultMap>
+	
+	<select id="getWithdrawalLogById" resultMap="withdrawalLogMap">
+		select * from sps_withdrawal_log where id=#{id}
+	</select>
+	
+	<select id="listWithdrawalLog" resultMap="withdrawalLogMap">
+		select * from sps_withdrawal_log order by create_time desc
+	</select>
+	
+	<insert id="saveWithdrawalLog" parameterType="WithdrawalLog">
+		insert into sps_withdrawal_log(uid,apply_order,status,create_time,approver,approver_time) 
+		values(#{uid},#{applyOrder},#{status},#{createTime},#{approver},#{approverTime})
+	</insert>
+	
+	<delete id="deleteWithdrawalLog">
+		delete from sps_withdrawal_log where id=#{id}
+	</delete>
+	
+	<update id="updateWithdrawalLog" parameterType="WithdrawalLog">
+		update sps_withdrawal_log set uid=#{uid},apply_order=#{applyOrder},status=#{status},create_time=#{createTime},
+		approver=#{approver},approver_time=#{approverTime} where id=#{id}
+	</update>
+</mapper>

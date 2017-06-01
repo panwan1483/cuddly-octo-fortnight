@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.AreaDao">
+	<resultMap type="Area" id="areaMap">
+		<result property="id" column="id"></result>
+		<result property="areaName" column="area_name"></result>
+		<result property="parentId" column="parent_id"></result>
+		<result property="level" column="level"></result>
+		<result property="sequence" column="sequence"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="getAreaById" resultMap="areaMap">
+		select * from sps_area where id=#{id}
+	</select>
+	
+	<select id="listArea" resultMap="areaMap">
+		select * from sps_area order by create_time desc
+	</select>
+	
+	<insert id="saveArea" parameterType="Area">
+		insert into sps_area(area_name,parent_id,level,sequence,create_time) 
+		values(#{areaName},#{parentId},#{level},#{sequence},#{createTime})
+	</insert>
+	
+	<delete id="deleteArea">
+		delete from sps_area where id=#{id}
+	</delete>
+	
+	<update id="updateArea" parameterType="Area">
+		update sps_area set area_name=#{areaName},parent_id=#{parentId},level=#{level},
+		sequence=#{sequence},create_time=#{createTime} where id=#{id}
+	</update>
+</mapper>

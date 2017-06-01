@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sps.ecommerce.admin.dao.MenuDao">
+	<resultMap type="Menu" id="menuMap">
+		<result property="id" column="id"></result>
+		<result property="menuName" column="menu_name"></result>
+		<result property="menuUrl" column="menu_url"></result>
+		<result property="icon" column="icon"></result>
+		<result property="parentId" column="parent_id"></result>
+		<result property="sequence" column="sequence"></result>
+		<result property="createTime" column="create_time"></result>
+	</resultMap>
+	
+	<select id="getMenuById" resultMap="menuMap">
+		select * from sys_menu where id=#{id}
+	</select>
+	
+	<select id="listMenu" resultMap="menuMap">
+		select * from sys_menu order by create_time desc
+	</select>
+	
+	<insert id="saveMenu" parameterType="Menu">
+		insert into sys_menu(menu_name,menu_url,icon,parent_id,sequence,create_time) 
+		values(#{menuName},#{menuUrl},#{icon},#{parentId},#{sequence},#{createTime})
+	</insert>
+	
+	<delete id="deleteMenu">
+		delete from sys_menu where id=#{id}
+	</delete>
+	
+	<update id="updateMenu" parameterType="Menu">
+		update sys_menu set menu_name=#{menuName},menu_url=#{menuUrl},icon=#{icon},parent_id=#{parentId},sequence=#{sequence},create_time=#{createTime}
+		where id=#{id}
+	</update>
+</mapper>

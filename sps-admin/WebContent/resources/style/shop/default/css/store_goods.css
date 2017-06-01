@@ -1,0 +1,562 @@
+body{background: #fff;}
+body, button, input, select, textarea {
+    font: 12px/1.5 Arial,Helvetica,sans-serif;
+}
+.nav_bg ,.nav_width,.regoods h1,.Group_right .i_right span a{
+    background-color: #ca141d;
+}
+.etalage_wrap ul li.etalage_smallthumb_active {
+    border: 1px solid#ca141d;
+}
+.etalage_small_thumbs ul li:hover{
+    border: 1px solid #ca141d;
+}
+.orange {
+    color: #e01d20;
+}
+.pro-detail-tab-button {
+    padding: 7px 94px 0 0;
+}
+.pro-detail-tab-button a:hover{
+    color: #fff;
+}
+.main {
+    width: 1200px;
+    margin: 0px auto;
+}
+.shop {
+    width: 1200px;
+}
+.productdeta {
+    width: 1200px;
+}
+.photoproduct {
+    width: 1200px;
+}
+.photopro {
+    width:540px;
+    height: 645px;
+}
+.photopro a .zoomPad img {
+    width: 540px;
+    height:525px;
+    border-left: 0px;
+}
+.photopro {
+    width: 540px;
+    height: 550px;
+    border: 1px solid #dedede;
+}
+.zoomWindow{
+    position: absolute;
+    left: 541px;
+}
+.productName{
+    font-size: 20px;
+    line-height: 25px;
+}
+.productInfo{
+    font-size: 16px;
+    color: #e01d20;
+    line-height: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.productshop {
+    width: 618px;
+    float: left;
+    border: 1px solid #dedede;
+    border-left: 0px;
+    height: 550px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.htmleaf-content{
+    width: 480px;
+    margin: 0 auto;
+}
+.etalage_wrap{
+    width: 480px;  height: 480px;  }
+.detailsbottom_ps {  z-index: 19;  }
+.detailstop ul li{
+    padding-left: 20px;
+    width: 599px;
+    font-family: 'Tahoma',\5FAE\8F6F\96C5\9ED1;
+}
+.detbt{  display: block;  }
+.addcar {
+    width: 176px;
+    margin-right: 20px;
+}
+.addcar input {
+    width: 175px;
+    height: 39px;
+    background: none;
+    border: 1px solid #e01d20;
+    background-color: #e01d20;
+    margin-right: 50px;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.top_sear_kf {
+    width: 146px;
+    margin-top: 4px;
+}
+.atonce input {
+    width: 124px;
+    height: 40px;
+    color: #E5511D;
+    border: 1px solid #F0CAB6 ;
+    background: #FFE4D0;
+    margin-left: 70px;
+    cursor: pointer;
+    font-size: 14px;
+    padding-bottom: 2px;
+}
+
+.detailsbottom {
+    width: 465px;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.detailsbottom_ps {
+    width: 599px;
+    margin-left: 20px;
+}
+.info-layout{
+    width: 590px;  height:30px;
+}
+.atonce input {
+    margin-left: -46px;
+}
+.addcar input {
+    margin-left: -31px;
+}
+.Group_main , .shopselled , .shop_index_box, .shopindex_right {
+    width: 1200px;
+}
+.Group {
+    width:1200px;
+}
+.Group_left {
+    width: 225px;
+}
+.Group_mid {
+    margin-left: 80px;
+}
+.Group_mid ul li i img{
+    margin-left: 60px;
+}
+.tool-fixed {
+    position: relative;
+}
+.pro-detail-area .tool-fixed-holder {
+    height: 0px;
+}
+.tool-fixed .pro-detail-tab {
+    width: 933px;
+}
+.fr {
+    margin-right: 0px;
+}
+.u-3-4 {
+    width: 935px;
+}
+#pro-tab-feature-content,#pro-tab-parameter-content,#pro-tab-package-content, #pro-tab-service-content,#pro-tab-software-content,#pro-tab-evaluate-content{
+    border: 1px solid #dedede;
+}
+#pro-tab-feature-content{
+    padding: 0px 96px 0px 87px;
+}
+.current {
+    border-top: 1px solid #e01d20;
+    border-bottom-color: #FFF;
+    padding-top: 0;
+}
+.u-1-4 .pro-list li .p-img s, .ecnews-area .b a, .ui-area .before, .ui-area .after, .pro-slogan-area .h, .pro-slogan-area .f, .pro-slogan-area .arrow, .pro-gift-area .h, .pro-gift-area .f, .pro-tab-area a, .pro-tab-area span {
+    background: transparent url(../images/sprites1.png) scroll no-repeat;
+}
+.Group_mid {
+    width: 225px;  overflow-x:visible;
+}
+.Group_right {
+    margin-left: 38px;
+}
+.Group_right .i_right {
+    width: 50px;
+    float: right;
+}
+.Group_main {
+    width: 1100px;
+    height: 182px;
+    padding-left: 100px;
+}
+.starRating-area, .starRating-area s {
+    background: transparent url(../images/star7.png) scroll no-repeat;
+}
+.detailsbottom ul li {
+    margin-bottom: 20px;
+}
+.smallgoods {
+    margin: 10px auto;
+}
+.current {
+    border-top: 1px solid #e01d20;
+    border-bottom-color: #FFF;
+    padding-top: 0;
+}
+.collection_goods {
+    float: left;
+}
+.collection_goods {
+    float: left;
+    width: 280px;
+    margin-left: 71px;
+}
+.top_sear_kf {
+    width: 129px;
+    float: left;
+}
+.collection_goods {
+    width:484px;
+    margin-left: 25px;
+}
+.photopro {
+    width: 577px;
+}
+.head {
+    width: 1200px;
+}
+.toolBar {
+   
+}
+.toph_bigsearch {
+   padding-left: 115px;
+}
+
+
+.detailsbottom ul li {
+    margin-bottom: 0px;
+}
+.detailsbottom ul li {
+    margin-top: 0px;
+}
+.detailsbottom ul .addcar-buy{
+    margin-top: 30px;
+}
+.datespan {
+    width: 85px;
+}
+.shopselled{
+    margin-bottom: 10px;
+}
+.goodsdetails div img{
+    margin: 0px 72px;
+}
+.selleddetails {
+    border: 1px solid #ccc;
+}
+.goodsdetails {
+    width: 100%;
+}
+.goodsdetails {
+    border: 0px;
+}
+.tuang_h h1{
+    font-size: 20px;
+    line-height: 25px;
+}
+.tuang_h{
+    border-bottom:1px solid #dedede;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.detailsbottom ul .addcar-buy {
+    margin-left: -35px;
+}
+.datespan {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: -16px;
+}
+.zoomPad {
+    margin-top: 20px;
+    margin-left: 120px;
+    margin-bottom: 79px;
+}
+.top_sear_kf {
+    margin-top: -5px;
+}
+.shop_index {
+    width: 1200px;
+    padding-top: 0px;
+    clear: both;
+}
+.toph_bigsearch {
+    
+}
+
+.nav {
+ 
+}
+.evaluation {
+    margin-top: 36px;
+}
+.tuang_h h1 {
+    font-size: 20px;
+    line-height: 25px;
+    width: 200px;
+    float: left;
+}
+.top_sear_kf {
+    float: right;
+}
+.stockdate .stock input {
+    position: relative;
+    top: -10px;
+}
+.toph_sear_txt {
+    width: 357px;
+}
+/*****************************鐑攢姒滃崟***鏈�繎娴忚***************************************/
+.wide .u-1-4 {
+    width: 240px;
+}
+ol, ul {
+    list-style: outside none none;
+}
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0px;
+    padding: 0px;
+}
+.wide .u-1-4 {
+    width: 240px;
+}
+.fl, .left, .left-area {
+    float: left;
+}
+.hot-area, .rl-area, .bp-area, .pro-desc-area {
+    border: 1px solid #DEDEDE;
+    background-color: #FFF;
+}
+.hot-area .h, .rl-area .h, .bp-area .h, .pro-desc-area .h {
+    height: 47px;
+    background-color: #F7F7F7;
+}
+.hot-area .h h3, .rl-area .h h3, .bp-area .h h3, .pro-desc-area .h h3 {
+    line-height: 47px;
+    text-indent: 14px;
+    font-size: 14px;
+    font-family: "Tahoma",微锟斤拷锟脚猴拷;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+.hot-area .b, .rl-area .b, .bp-area .b, .pro-desc-area .b {
+    overflow: hidden;
+}
+.u-1-4 .pro-list li {
+    border-top: 1px solid #DEDEDE;
+    padding: 12px 12px 12px 10px;
+}
+.u-1-4 .pro-list li .p-img {
+    float: left;
+    width: 56px;
+    position: absolute;
+}
+a {
+    cursor: pointer;
+}
+ins, a {
+    text-decoration: none;
+    color: #333;
+}
+.u-1-4 .pro-list li .p-img img {
+    width: 56px;
+    height: 56px;
+    display: block;
+    vertical-align: top;
+}
+fieldset, img, a img {
+    border: 0px none;
+}
+.u-1-4 .pro-list li .p-img s.s1 {
+    background-position: 0px 0px;
+}
+.u-1-4 .pro-list li .p-img s {
+    position: absolute;
+    top: -12px;
+    left: -10px;
+    width: 23px;
+    height: 23px;
+}
+.u-1-4 .pro-list li .p-img s, .ecnews-area .b a, .ui-area .before, .ui-area .after, .pro-slogan-area .h, .pro-slogan-area .f, .pro-slogan-area .arrow, .pro-gift-area .h, .pro-gift-area .f, .pro-tab-area a, .pro-tab-area span {
+    background: transparent url("../images/sprites1.png") no-repeat scroll 0% 0%;
+}
+.u-1-4 .pro-list li .p-name {
+    height: 36px;
+    margin-bottom: 3px;
+    overflow: hidden;
+    font-family: "Tahoma",微锟斤拷锟脚猴拷;
+}
+.u-1-4 .pro-list li .p-name, .u-1-4 .pro-list li .p-price {
+    margin-left: 56px;
+    padding-left: 17px;
+}
+.u-1-4 .pro-list li .p-name a {
+    color: #666;
+}
+.u-1-4 .pro-list li .p-name, .u-1-4 .pro-list li .p-price {
+    margin-left: 56px;
+    padding-left: 17px;
+}
+.u-1-4 .pro-list li .p-price b {
+    color: #E01D20;
+    font-weight: 400;
+}
+.hr-1, .hr-2, .hr-3, .hr-4, .hr-5, .hr-7, .hr-9, .hr-10, .hr-15, .hr-20, .hr-22, .hr-25, .hr-30, .hr-35, .hr-40, .hr-45, .hr-50, .hr-55, .hr-60, .hr-65, .hr-70, .hr-75, .hr-80, .hr-85, .hr-90 {
+    clear: both;
+    font-size: 1px;
+    line-height: 1px;
+}
+.hr-20 {
+    height: 20px;
+}
+.hr-10 {
+    height: 10px;
+}
+.hot-area, .rl-area, .bp-area, .pro-desc-area {
+    border: 1px solid #DEDEDE;
+    background-color: #FFF;
+}
+.hot-area .h, .rl-area .h, .bp-area .h, .pro-desc-area .h {
+    height: 47px;
+    background-color: #F7F7F7;
+}
+.hot-area .h h3, .rl-area .h h3, .bp-area .h h3, .pro-desc-area .h h3 {
+    line-height: 47px;
+    text-indent: 14px;
+    font-size: 14px;
+    font-family: "Tahoma",微锟斤拷锟脚猴拷;
+}
+.fl, .left, .left-area {
+    float: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+.rl-area .h .fr {
+    padding: 15px 16px 0px 0px;
+}
+.fr, .right, .right-area {
+    float: right;
+}
+.rl-area .h a {
+    color: #F96209;
+    display: block;
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
+.icon-clear {
+    width: 17px;
+    height: 18px;
+    background-position: 0px -116px;
+}
+.u-1-4 .pro-list li {
+    border-top: 1px solid #DEDEDE;
+    padding: 12px 12px 12px 10px;
+}
+.hr-60 {
+    height: 60px;
+}
+.fl, .left, .left-area {
+    float: left;
+    width: 240px;
+}
+.g {
+    margin: 0 auto;
+    zoom: 1;
+}
+.breadcrumb-area {
+    color: #BBB;
+}
+.breadcrumb-area {
+    margin-left: 1px;
+    line-height: 1.5;
+}
+.fcn {
+    font-family: \5b8b\4f53;
+}
+.breadcrumb-area a, .breadcrumb-area span {
+    color: #666;
+    font-family: \5FAE\8F6F\96C5\9ED1,\5B8B\4F53;
+}
+a {
+    cursor: pointer;
+}
+.p-img a img{
+    width: 56px;
+    height: 56px;
+}
+.u-1-4 .pro-list li .p-img s {
+    position: absolute;
+    top: -12px;
+    left: -10px;
+    width: 23px;
+    height: 23px;
+}
+.u-1-4 .pro-list li .p-img s.s1 {
+    background-position: 0 0;
+}
+.u-1-4 .pro-list li .p-img s.s2 {
+    background-position: -33px 0;
+}
+.u-1-4 .pro-list li .p-img s.s3 {
+    background-position: -66px 0;
+}
+.u-1-4 .pro-list li .p-img s.s4 {
+    background-position: -99px 0;
+}
+.rl-area .h a {
+    color: #f96209;
+    display: block;
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
+.rl-area .h .fr {
+    padding: 15px 16px 0 0;
+}
+.fr, .right, .right-area {
+    float: right;
+}
+.pro-gallery-area .pro-gallery-back, .pro-gallery-area .pro-gallery-forward, .pro-action-area .countdown-begin-area s, .pro-action-area .countdown-end-area s, .icon-clear {
+    background: transparent url(../images/icon34.png) scroll no-repeat;
+}
+.icon-clear {
+    display: inline-block;
+    width: 17px;
+    height: 18px;
+    background-position: 0 -116px;
+}
+.fl, .left, .left-area {
+    float: left;
+}
+
+.toph_sear{
+	    width: 432px;
+}
+
+.logo{
+	width:237px;
+}
+.keyword {
+    width: 680px;
+}
+
+

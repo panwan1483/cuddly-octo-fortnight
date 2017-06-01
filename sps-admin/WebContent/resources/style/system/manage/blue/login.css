@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+			padding: 0;margin: 0;	
+}
+body
+{
+	background-color: #fff;
+	font-size: 12px;
+	color:#484848;
+	font-family: '微软雅黑'；  
+}	
+.header{
+	width:920px;
+	margin-left: auto;
+	margin-right:auto;
+	height:60px;
+}
+.logo-login{
+	float: left;
+	margin-top:15px;
+}
+.slogan-company{
+	float: left;
+	margin-top:22px;
+	margin-left:4px;
+	width: 155px;
+	height: 16px;
+	opacity:.6;
+	line-height: 11;
+	overflow:hidden;
+	background: url(/resources/style/system/manage/blue/images//img7.png);
+}
+.container{
+	height: 480px;
+	background: url(/resources/style/system/manage/blue/images/img.jpg) no-repeat center center;
+}
+.background-identity{
+	width: 980px;
+	height: 292px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.background-identity .ad{
+	color:#fff;
+	padding:120px 0 0 50px;
+}
+.background-identity .ad .title{
+	font-size:40px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+.background-identity .ad .content{
+	font-size: 30px
+}
+.user-login{
+	position: absolute;
+	top: 80px;
+	right: -6px;
+	width: 280px;
+	padding-bottom: 6px;
+	border:1px solid #d7e0e9;
+	border-radius: 9px;
+	background: url(images/img12.png);
+	box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+.user-login .head {
+	height: 21px;
+	line-height: 42px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 200;
+}
+
+.user-login .verify-message{ 
+	height: 20px; 
+	line-height: 20px; 
+	margin-bottom: -6px; 
+	padding: 0 24px; 
+	color: #c00; 
+}
+.user-login .form-item{ 
+	padding: 9px 24px; 
+}
+.user-login .text{ 
+	width: 197px; 
+	height: 18px; 
+	line-height: 18px; 
+	padding: 9px 3px 9px 30px; 
+	border: 1px solid #9E9E9E; 
+	border-bottom-color: #B2B2B2; 
+	border-right-color: #B2B2B2; 
+	border-radius: 3px; box-shadow: 2px 2px 2px rgba(0,0,0,.1) inset; }
+	.user-login .text:focus{ box-shadow: 0 0 3px rgba(71,126,219,.7); outline: 0; }
+	.user-login .company{ background: url(/resources/style/system/manage/blue/images//img11.png) no-repeat 8px 9px #fff; }
+	.user-login .account{ background: url(/resources/style/system/manage/blue/images//img10.png) no-repeat 8px 10px #fff; }
+	.user-login .password{ background: url(/resources/style/system/manage/blue/images//img9.png) no-repeat 8px 10px #fff; }
+	.user-login .verify{ background: url(/resources/style/system/manage/blue/images//img14.png) no-repeat 8px 10px #fff; }
+	.user-login .verify-image{ vertical-align: middle; }
+	.user-login .think-placeholder{ vertical-align: middle; }
+	.user-login .submit{ cursor: pointer; border: 0; padding: 0; height: 36px; width: 232px; background-color: #408FE3; border-radius: 4px; color: #fff; font-weight: 700; }
+	.user-login .submit:hover{ background-color: #1F73CA; }
+	.user-login .loading{ cursor: pointer; border: 0; padding: 0; height: 36px; width: 232px; background-color: #ddd; border-radius: 4px; color: #666; font-weight: 700; }
+	.user-login .keep{ display: inline-block; height: 18px; line-height	: 18px; }
+	.user-login .keep input{ vertical-align: -2px; margin-right: 4px; }
+
+	.footer {
+		width: 950px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 24px;
+		line-height: 24px;
+		padding: 12px 0;
+	}
+	.copyright{
+		text-align: right;
+		color: #999;
+		float: left;
+	}
+	
+	#loginForm label.error {
+		 padding-left: 16px;
+		 padding-bottom: 2px;
+		 font-weight: bold;
+		 color: #EA5200;
+		 margin-left:60px;
+	}
